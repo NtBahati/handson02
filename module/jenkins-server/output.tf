@@ -2,10 +2,10 @@ output "vpc_id" {
   value = data.aws_vpc.vpc.id
 }
 
-output "subnet_01" {
-  value = data.aws_subnet.subnet_01.id
+output "subnet-1" {
+  value = data.aws_subnet.subnet-1.id
 }
 
-output "jenkins_master_ami" {
-  value = data.aws_ami.jenkins_master_ami.id
+output "lastest_ubuntu" {
+  value = data.aws_ami.latest_ubuntu.id
 }

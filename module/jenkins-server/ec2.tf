@@ -1,10 +1,9 @@
 resource "aws_instance" "ec2" {
-  ami                    = data.aws_ami.amazon_linux_2.id
+  ami                    = data.aws_ami.latest_ubuntu.id
   instance_type          = var.instance_type
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
-  subnet_id              = data.aws_subnet.subnet_01.id
-
+  vpc_security_group_ids = [data.aws_security_group.sg.id]
+  subnet_id              = data.aws_subnet.subnet-1.id 
   root_block_device {
     volume_size = var.root_volume
     volume_type = "gp3"
