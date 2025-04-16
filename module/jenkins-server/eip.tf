@@ -8,6 +8,6 @@ resource "aws_eip" "jenkins_eip" {
 
 # Associate the Elastic IP with the instance
 resource "aws_eip_association" "eip_assoc" {
-  instance_id   = aws_instance.ec2.id
+  instance_id   = aws_instance.jenkins.id
   allocation_id = aws_eip.jenkins_eip.id
 }
