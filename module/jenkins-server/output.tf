@@ -6,6 +6,10 @@ output "subnet-1" {
   value = data.aws_subnet.subnet-1.id
 }
 
-output "lastest_ubuntu" {
-  value = data.aws_ami.latest_ubuntu.id
-}
+# output "lastest_ubuntu" {
+#   value = data.aws_ami.latest_ubuntu.id
+# }
+
+output "aws_ami" {
+  value = var.aws_ami
+  }
